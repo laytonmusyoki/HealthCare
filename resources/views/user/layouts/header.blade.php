@@ -1,11 +1,11 @@
-<div class="navbar">
+<div class="navbar" id="scrollNavbar">
     <div class="logo-section">
         <div class="logo">
             <img src="{{ asset('/images/logo.svg') }}" width="150" alt="sdfsf">
         </div>
         <div class="links">
-            <a href="">Home</a>
-            <a href="">Find Care</a>
+            <a href="{{ route('user.dashboard') }}" class="{{ request()->routeIs('user.dashboard') ? 'active' : '' }}">Home</a>
+            <a href="{{ route('user.findCare') }}" class="{{ request()->routeIs('user.findCare') ? 'active' : '' }}">Find Care</a>
             <a href="">My Chart</a>
         </div>
     </div>
